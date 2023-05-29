@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "程序员的自我修养"
-  text: "笔记"
-  tagline: My great project tagline
+  name: "靓仔的自我修养"
+  text: ""
+  tagline: "这是一位靓仔的笔记"
   actions:
     - theme: brand
       text: Markdown Examples

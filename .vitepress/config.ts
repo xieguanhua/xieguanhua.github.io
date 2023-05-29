@@ -3,7 +3,7 @@ import {defineConfig} from 'vitepress'
 // https://vitepress.dev/reference/site-config
 // @ts-ignore
 export default defineConfig({
-    title: "My Awesome Project",
+    title: "靓仔的博客",
     description: "A VitePress Site",
     head: [
       [
