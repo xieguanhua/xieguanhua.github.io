@@ -9,6 +9,7 @@ async function loadScript(src) {
 }
 
 async function installLive2D() {
+    if(live2d_settings)return
     await loadScript('/js/jquery.min.js')
     await loadScript('/js/jquery-ui.min.js')
     await loadScript('/js/live2d.min.js')

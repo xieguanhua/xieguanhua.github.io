@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "靓仔的自我修养"
   text: ""
-  tagline: "这是一位靓仔的笔记"
+  tagline: "这是一位靓仔的博客"
   actions:
     - theme: brand
       text: Markdown Examples
