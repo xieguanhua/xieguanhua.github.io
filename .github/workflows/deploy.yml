@@ -56,5 +56,9 @@ jobs:
            # 6. pm2.config.json 是 启动 项目，( npm start )
            script: |
              cd  /home/blogs
-             wget -O blogs.zip https://github.com/xieguanhua/xieguanhua.github.io/releases/download/latest/blogs.zip
+             wget https://github.com/xieguanhua/xieguanhua.github.io/releases/download/latest/blogs.zip
+             # 等待文件下载完成
+              until [ -f "blogs.zip" ]; do
+                sleep 1
+             done
              tar -xzvf blogs.zip
