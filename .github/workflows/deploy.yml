@@ -57,4 +57,4 @@ jobs:
            script: |
              cd  /home/blogs
              wget https://github.com/xieguanhua/xieguanhua.github.io/releases/download/latest/blogs.zip
-             unzip blogs.zip
+             unzip -o blogs.zip
