@@ -30,7 +30,7 @@ jobs:
             name: V0.${{ github.run_id }}.dev
             body: TODO New Release.
             draft: false  # 是否是草稿
-            prerelease: true # 是否是预览版
+            prerelease: false # 是否是预览版
             files: |
               blogs.zip
               LICENSE
