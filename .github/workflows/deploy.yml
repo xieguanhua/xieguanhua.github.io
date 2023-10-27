@@ -24,18 +24,17 @@ jobs:
         run: zip -r blogs.zip .vitepress/dist
 
       - name: Create Release
-      - uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-                tag_name: ${{ github.ref }}
-                name: Release ${{ github.ref }}
-                body: TODO New Release.
-                draft: false
-                prerelease: false
-                files: |
-                  blogs.zip
-                  LICENSE 
-
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+          body: TODO New Release.
+          draft: false
+          prerelease: false
+          files: |
+            blogs.zip
+            LICENSE
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
