@@ -21,8 +21,8 @@ jobs:
       - name: Create Release and Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-            tag_name: V1.${{ github.run_id }}.deploy
-            name: blogs-V1.${{ github.run_id }}.deploy
+            tag_name: v1.${{ github.run_id }}
+            name: blogs-v1.${{ github.run_id }}
             body: TODO New Release.
             draft: false  # 是否是草稿
             prerelease: true # 是否是预览版
@@ -51,8 +51,8 @@ jobs:
            # 6. pm2.config.json 是 启动 项目，( npm start )
            script: |
              cd  /home/blogs
-             wget https://github.com/xieguanhua/xieguanhua.github.io/archive/refs/tags/V1.${{ github.run_id }}.deploy.zip
-             unzip -o V1.${{ github.run_id }}.deploy.zip
-             rm -rf V1.${{ github.run_id }}.deploy.zip
+             wget https://github.com/xieguanhua/xieguanhua.github.io/archive/refs/tags/v1.${{ github.run_id }}.zip
+             unzip -o v1.${{ github.run_id }}.zip
+             rm -rf v1.${{ github.run_id }}.zip
 
               
