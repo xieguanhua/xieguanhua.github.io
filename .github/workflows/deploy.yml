@@ -21,8 +21,8 @@ jobs:
       - name: Create Release and Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-            tag_name: Deploy1.${{ github.run_id }}
-            name: Deploy1.${{ github.run_id }}
+            tag_name: Deploy.${{ github.run_id }}
+            name: blogs
             body: TODO New Release.
             draft: false  # 是否是草稿
             prerelease: true # 是否是预览版
