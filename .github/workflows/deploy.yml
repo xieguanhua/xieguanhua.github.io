@@ -18,11 +18,7 @@ jobs:
 
       - name: Build
         run: yarn docs:build
-
-
-      - name: Zip the Build
-        run: zip -r blogs.zip .vitepress/dist
-
+    
       - name: Create Release and Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
@@ -58,3 +54,4 @@ jobs:
              cd  /home/blogs
              wget https://github.com/xieguanhua/xieguanhua.github.io/releases/download/latest/blogs.zip
              unzip -o blogs.zip
+             mv .vitepress/dist/ dist
