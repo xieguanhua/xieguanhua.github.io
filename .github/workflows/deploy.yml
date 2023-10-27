@@ -54,4 +54,3 @@ jobs:
              cd  /home/blogs
              wget https://github.com/xieguanhua/xieguanhua.github.io/releases/download/latest/blogs.zip
              unzip -o blogs.zip
-             mv .vitepress/dist/ dist
