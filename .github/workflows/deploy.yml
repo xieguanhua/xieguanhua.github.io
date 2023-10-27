@@ -39,3 +39,22 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .vitepress/dist
+            # 部署到服务器
+      - name: Deploy-Server
+        uses: appleboy/ssh-action@master
+        with:
+           host: ${{ secrets.HOST }} # 公网 IP 或 域名
+           username: ${{ secrets.USERNAME }} # 登录名
+           password: ${{ secrets.PASSWORD }} # 密码
+           port: ${{ secrets.PORT }} # 端口
+             # 类似在服务端的终端-执行以下操作
+             # 1. 找到需要存放文件的地方
+             # 2. 从 Github 上将 release.tgz 复制一份放入文件内
+             # 3. 解压 release.tgz 文件
+             # 4. 安装插件
+           # 5. 重启 pm2, 并执行 pm2.config.json 内操作，
+           # 6. pm2.config.json 是 启动 项目，( npm start )
+           script: |
+             cd  /home/blogs
+             wget https://github.com/xieguanhua/xieguanhua.github.io/releases/download/latest/blogs.zip
+             tar -xzvf blogs.zip
