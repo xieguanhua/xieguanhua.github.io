@@ -23,18 +23,18 @@ jobs:
       - name: Zip the Build
         run: zip -r blogs.zip .vitepress/dist
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
+      - name: Create Release and Upload Release Asset
         if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          name: Release ${{ github.ref }}
-          body: TODO New Release.
-          draft: false
-          prerelease: false
-          files: |
-            blogs.zip
-            LICENSE
+            tag_name: V0.${{ github.run_id }}.dev
+            name: V0.${{ github.run_id }}.dev
+            body: TODO New Release.
+            draft: false  # 是否是草稿
+            prerelease: true # 是否是预览版
+            files: |
+              blogs.zip
+              LICENSE
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
