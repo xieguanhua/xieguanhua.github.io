@@ -17,8 +17,8 @@ hero:
 features:
   - title: 功能一
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: 百度链接
-    linkText: https://www.baidu.com/
+    link: https://www.baidu.com
+    linkText: 百度链接
   - title: 功能二
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: 功能三
