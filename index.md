@@ -21,6 +21,8 @@ features:
     linkText: 百度链接
   - title: 功能二
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: https://guanhuaxie.eu.org/js/index.html
+    linkText: 自定义输入链接
   - title: 功能三
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
