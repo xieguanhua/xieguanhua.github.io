@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Link</title>
+</head>
+<body>
+
+<label for="linkInput">输入链接：</label>
+<input type="text" id="linkInput" oninput="updateLink()">
+
+<div id="output"></div>
+
+<script>
+    function updateLink() {
+        // 获取输入框的值
+        var inputValue = document.getElementById('linkInput').value;
+
+        // 获取显示链接的 div 元素
+        var outputDiv = document.getElementById('output');
+
+        // 更新 div 的内容，显示链接
+        outputDiv.innerHTML = '<a href="' + inputValue + '" target="_blank">' + inputValue + '</a>';
+    }
+</script>
+
+</body>
+</html>
