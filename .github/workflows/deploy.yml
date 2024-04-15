@@ -52,7 +52,7 @@ jobs:
            # 6. pm2.config.json 是 启动 项目，( npm start )
            script: |
              cd  /home/blogs
-             sleep 30
+             sleep 5
              wget https://github.com/xieguanhua/xieguanhua.github.io/releases/download/v1.${{ github.run_id }}.deploy/blogs.zip
              unzip -o blogs.zip
              rm -rf blogs.zip
