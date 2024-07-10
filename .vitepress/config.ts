@@ -3,6 +3,7 @@ import {defineConfig} from 'vitepress'
 // https://vitepress.dev/reference/site-config
 // @ts-ignore
 export default defineConfig({
+    ignoreDeadLinks: true,
     title: "靓仔的博客",
     description: "A VitePress Site",
     head: [
