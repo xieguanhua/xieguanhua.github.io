@@ -35,8 +35,6 @@ export default defineConfig({
                 text: 'interview',
                 collapsed: true,
                 items: [
-                    {text: '准备', link: '/interview/1-prepare'},
-                    {text: '程序员软件技能', link: '/interview/2-skill'},
                     {text: 'HTML', link: '/interview/3-HTML'},
                     {text: 'CSS', link: '/interview/4-CSS'},
                     {text: 'JS', link: '/interview/5-JS'},
