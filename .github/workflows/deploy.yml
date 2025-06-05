@@ -30,17 +30,15 @@ jobs:
             files: |
               blogs.zip
               LICENSE
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: .vitepress/dist
-      #       # 部署到服务器
       - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .vitepress/dist
+            # 部署到服务器
+      - name: Server
         uses: appleboy/ssh-action@master
         with:
-           debug: true
-           script_stop: true
            host: ${{ secrets.HOST }} # 公网 IP 或 域名
            username: ${{ secrets.USERNAME }} # 登录名
            password: ${{ secrets.PASSWORD }} # 密码
