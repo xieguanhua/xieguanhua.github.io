@@ -30,13 +30,13 @@ jobs:
             files: |
               blogs.zip
               LICENSE
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: .vitepress/dist
+      #       # 部署到服务器
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
-            # 部署到服务器
-      - name: Deploy-Server
         uses: appleboy/ssh-action@master
         with:
            debug: true
